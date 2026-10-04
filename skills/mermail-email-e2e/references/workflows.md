@@ -48,7 +48,7 @@ Use this when the host is connected with OAuth and `MERMAIL_API_KEY` is not in t
 
 1. Vendor the runner: copy `scripts/run-email-e2e.mjs` and `scripts/checks.mjs` into `.mermail/`.
 2. Add [github-action.yml](../templates/github-action.yml) as `.github/workflows/email-e2e.yml`, adjusting how the app starts.
-3. Repository settings: secret `MERMAIL_API_KEY`, variable `MERMAIL_E2E_MAILBOX`.
+3. Repository settings: create an `email-e2e` environment holding the `MERMAIL_API_KEY` secret, with required reviewers so code from a pull request cannot use the key without approval; set the variable `MERMAIL_E2E_MAILBOX`. The template passes the key only to the steps that need it (never to `npm ci`) and skips fork pull requests.
 4. Keep `concurrency` at one run per test inbox, or enable `plusAddressing` so parallel runs use distinct addresses.
 5. JUnit output (`email-e2e-report/junit.xml`) plugs into test reporters; `report.md` reads well as a job summary (`cat email-e2e-report/report.md >> $GITHUB_STEP_SUMMARY`).
 

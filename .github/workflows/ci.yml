@@ -1,0 +1,26 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Unit tests + offline runner E2E (fake Mermail MCP server)
+        run: npm test
+      - name: Skill layout
+        run: |
+          test -f skills/mermail-email-e2e/SKILL.md
+          test $(wc -l < skills/mermail-email-e2e/SKILL.md) -le 500
+          grep -q '^name: mermail-email-e2e$' skills/mermail-email-e2e/SKILL.md
+          grep -q 'Use \$mermail-email-e2e' skills/mermail-email-e2e/agents/openai.yaml

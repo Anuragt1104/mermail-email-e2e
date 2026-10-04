@@ -1,0 +1,7 @@
+node_modules/
+email-e2e-report/
+.env
+.env.*
+*.log
+.DS_Store
+video/work/

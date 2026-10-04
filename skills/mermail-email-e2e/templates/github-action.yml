@@ -1,0 +1,35 @@
+# .github/workflows/email-e2e.yml — run your email flows against a real Mermail inbox on every PR.
+# Secrets: MERMAIL_API_KEY (workspace project key). Variables: MERMAIL_E2E_MAILBOX (test mailbox address).
+name: Email E2E
+
+on:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: email-e2e # one run at a time per test inbox keeps candidate matching unambiguous
+  cancel-in-progress: false
+
+jobs:
+  email-e2e:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    env:
+      MERMAIL_API_KEY: ${{ secrets.MERMAIL_API_KEY }}
+      MERMAIL_E2E_MAILBOX: ${{ vars.MERMAIL_E2E_MAILBOX }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      # Start the app under test however your project does it; it must send real email to the test inbox.
+      - run: npm ci && (npm start &) && npx --yes wait-on http://localhost:4000
+      - run: node .mermail/run-email-e2e.mjs --spec .mermail/email-e2e.json
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: email-e2e-report
+          path: email-e2e-report/

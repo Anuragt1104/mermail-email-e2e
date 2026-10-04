@@ -1,0 +1,5 @@
+Hi {{name}},
+
+Use this code to reset your Acme Notes password: {{code}}
+
+The code expires in 10 minutes. If you did not ask to reset your password, ignore this email.

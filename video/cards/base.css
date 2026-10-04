@@ -1,0 +1,28 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;800&family=JetBrains+Mono:wght@500&display=swap");
+:root { --cyan:#43C9CB; --teal:#0E7F85; --ink:#07191C; --canvas:#F4F8F7; --red:#ff6b6b; --green:#43d17a; --amber:#f5b942; }
+* { box-sizing:border-box; margin:0; }
+html,body { width:1920px; height:1080px; }
+body { font-family:"Manrope","Segoe UI",sans-serif; color:#fff; background:var(--ink); overflow:hidden; }
+body.transparent { background:transparent; }
+.card { position:absolute; inset:0; padding:120px 140px; display:flex; flex-direction:column; justify-content:center;
+  background: radial-gradient(1200px 700px at 85% 10%, rgba(67,201,203,.18), transparent 60%), radial-gradient(900px 600px at 0% 100%, rgba(14,127,133,.25), transparent 60%), var(--ink); }
+.brand { position:absolute; top:70px; left:140px; display:flex; align-items:center; gap:18px; font-weight:600; font-size:26px; color:#cfe9ea; letter-spacing:.2px }
+.brand img { width:52px; height:52px; }
+.kicker { color:var(--cyan); font-weight:800; font-size:30px; letter-spacing:4px; text-transform:uppercase; margin-bottom:26px }
+h1 { font-size:112px; font-weight:800; letter-spacing:-2px; line-height:1.02 }
+h2 { font-size:76px; font-weight:800; letter-spacing:-1px; line-height:1.08 }
+p.lead { font-size:44px; line-height:1.35; color:#d7eeee; margin-top:34px; max-width:1500px; font-weight:400 }
+.mono { font-family:"JetBrains Mono",ui-monospace,monospace; }
+.pill { display:inline-block; background:rgba(67,201,203,.14); border:2px solid rgba(67,201,203,.5); color:#bff3f3; padding:14px 26px; border-radius:999px; font-size:30px; margin:0 14px 14px 0 }
+.foot { position:absolute; bottom:64px; left:140px; right:140px; display:flex; justify-content:space-between; color:#8fb7b9; font-size:26px }
+.accent { color:var(--cyan) }
+ul.bugs { list-style:none; margin-top:44px; padding:0 }
+ul.bugs li { font-size:42px; margin:20px 0; display:flex; gap:24px; align-items:baseline; color:#e6f4f4 }
+ul.bugs li code { font-family:"JetBrains Mono",monospace; background:rgba(255,107,107,.14); color:#ffb3b3; padding:4px 14px; border-radius:10px; font-size:38px }
+.x { color:var(--red); font-weight:800 }
+.ok { color:var(--green); font-weight:800 }
+.lower { position:absolute; left:60px; bottom:56px; display:flex; align-items:center; gap:22px; background:rgba(7,25,28,.92); border:2px solid rgba(67,201,203,.55);
+  border-radius:20px; padding:22px 34px; box-shadow:0 18px 50px rgba(0,0,0,.45); max-width:1500px }
+.lower .n { background:var(--cyan); color:var(--ink); font-weight:800; font-size:34px; width:58px; height:58px; border-radius:50%; display:grid; place-items:center; flex:none }
+.lower .t { font-size:36px; font-weight:700; color:#fff }
+.lower .s { font-size:26px; color:#9fd3d4; margin-top:4px; font-family:"JetBrains Mono",monospace }

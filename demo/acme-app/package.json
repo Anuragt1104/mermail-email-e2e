@@ -1,0 +1,9 @@
+{
+  "name": "acme-notes-demo",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "node --env-file-if-exists=.env --watch server.mjs"
+  },
+  "engines": { "node": ">=22" }
+}

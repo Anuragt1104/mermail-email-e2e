@@ -1,0 +1,20 @@
+{
+  "name": "mermail-email-e2e",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Mermail Agent Skill: end-to-end test the transactional emails your app sends in a real Mermail inbox, then fix them.",
+  "license": "MIT",
+  "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Anuragt1104/mermail-email-e2e.git"
+  },
+  "scripts": {
+    "test": "node --test tests/*.test.mjs",
+    "demo:app": "cd demo/acme-app && node --env-file-if-exists=.env --watch server.mjs",
+    "e2e": "node skills/mermail-email-e2e/scripts/run-email-e2e.mjs --spec demo/acme-app/.mermail/email-e2e.json"
+  },
+  "engines": {
+    "node": ">=22"
+  }
+}

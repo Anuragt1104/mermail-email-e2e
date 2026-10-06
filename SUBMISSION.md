@@ -5,7 +5,7 @@
 | Skill | `mermail-email-e2e` |
 | Pull request (Mermail Skills repo) | https://github.com/Nudgen-Marketing/mermail-skills/pull/481 |
 | Demo video (X) | _filled after posting_ |
-| Demo video (file) | [video/mermail-email-e2e-demo.mp4](video/mermail-email-e2e-demo.mp4) (2:49, real Claude Code session against a live Mermail mailbox) |
+| Demo video (file) | [video/mermail-email-e2e-demo.mp4](video/mermail-email-e2e-demo.mp4) (2:55, real Claude Code session against a live Mermail mailbox) |
 | Source repo | https://github.com/Anuragt1104/mermail-email-e2e |
 | AI client | Claude Code 2.1.289 (CLI, Opus 5.5) with the hosted Mermail MCP server (`https://console.mermail.app/mcp`) |
 

@@ -12,7 +12,8 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent
 WORK = ROOT / "work"
 CARDS = ROOT / "cards"
-VO = WORK / "vo"
+VO = WORK / "vo-kokoro"  # Kokoro-82M, voice af_heart (see narration.tsv)
+VO_EXT = ".wav"
 SEG = WORK / "segments"
 SEG.mkdir(parents=True, exist_ok=True)
 FPS = 30
@@ -100,15 +101,16 @@ def render_segment(idx, seg):
 
 
 def main():
-    only = set(sys.argv[1:])
+    # Segments are cached in work/segments; pass indices to re-render them, or --all for everything.
+    args = set(sys.argv[1:])
     clips, cursor, voice = [], 0.0, []
     for idx, seg in enumerate(SEGMENTS):
         path = SEG / f"seg_{idx:02d}.mp4"
-        if not only or str(idx) in only or not path.exists():
+        if "--all" in args or str(idx) in args or not path.exists():
             path = render_segment(idx, seg)
         clips.append(path)
         for vo in seg.get("vo", []):
-            voice.append((VO / f"{vo['clip']}.aiff", cursor + vo.get("at", 0.0)))
+            voice.append((VO / f"{vo['clip']}{VO_EXT}", cursor + vo.get("at", 0.0)))
         cursor += seg["dur"]
     print(f"timeline: {cursor:.1f}s, {len(clips)} segments, {len(voice)} narration clips")
 

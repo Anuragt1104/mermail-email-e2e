@@ -25,7 +25,7 @@ Unit tests mock the email provider, so the bugs that reach users are the ones no
 
 [![Red to green: first run 29 passed / 5 failed, re-run 34 passed / 0 failed](video/preview.gif)](video/mermail-email-e2e-demo.mp4)
 
-**[▶ Watch the 2:49 demo video](video/mermail-email-e2e-demo.mp4).** It's a real Claude Code session against a live Mermail Free-plan mailbox. One prompt takes the Acme Notes demo app from **29 passed · 5 failed** to **34 passed · 0 failed** in 4 min 20 s, with three real email bugs fixed in code. Speed-ups are labelled on screen; [how the video was made](video/README.md).
+**[▶ Watch the 2:55 demo video](video/mermail-email-e2e-demo.mp4).** It's a real Claude Code session against a live Mermail Free-plan mailbox. One prompt takes the Acme Notes demo app from **29 passed · 5 failed** to **34 passed · 0 failed** in 4 min 20 s, with three real email bugs fixed in code. Speed-ups are labelled on screen; [how the video was made](video/README.md).
 
 Output from that recorded run (the ✔ lines in between are trimmed):
 

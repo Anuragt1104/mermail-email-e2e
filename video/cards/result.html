@@ -1,0 +1,23 @@
+<!doctype html><html><head><meta charset="utf-8"><link rel="stylesheet" href="base.css">
+<style>
+.row{display:flex;gap:36px;margin-top:64px}
+.stat{flex:1;background:rgba(255,255,255,.04);border:2px solid rgba(67,201,203,.35);border-radius:22px;padding:34px 34px}
+.stat .big{font-size:84px;font-weight:800;letter-spacing:-2px;line-height:1}
+.stat .lbl{font-size:28px;color:#a9cfd0;margin-top:14px;line-height:1.35}
+.red{color:#ff6b6b}.grn{color:#43d17a}
+.list{margin-top:46px;font-size:32px;color:#d7eeee;line-height:1.7}
+.list code{font-family:"JetBrains Mono",monospace;font-size:28px;background:rgba(67,201,203,.12);color:#bff3f3;padding:2px 10px;border-radius:8px}
+</style></head><body>
+<div class="card" style="justify-content:flex-start;padding-top:190px">
+  <div class="brand"><img src="mermail-mark.svg" alt="">mermail-email-e2e</div>
+  <div class="kicker">Result · one prompt, 4 min 20 s</div>
+  <h2>3 real email bugs found and fixed.</h2>
+  <div class="row">
+    <div class="stat"><div class="big"><span class="red">5</span> → <span class="grn">0</span></div><div class="lbl">failing checks<br>(29 → 34 passed)</div></div>
+    <div class="stat"><div class="big grn">verified</div><div class="lbl">the clicked link now<br>activates the account</div></div>
+    <div class="stat"><div class="big">1×</div><div class="lbl">verification email per signup<br>(was sent twice)</div></div>
+  </div>
+  <div class="list">
+    <code>emails/verify.html</code> {{firstName}} → {{name}} &nbsp;·&nbsp; <code>server.mjs</code> link uses verifyToken, duplicate send removed
+  </div>
+</div></body></html>

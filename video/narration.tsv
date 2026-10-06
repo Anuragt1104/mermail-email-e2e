@@ -1,0 +1,16 @@
+# clip	text  (macOS `say -v Samantha -r 178`, placed per timeline.json)
+01_intro	This is mermail email e two e: a Mermail agent skill that gives your coding agent real email to test the emails your app sends, and then fixes them.
+02_problem	Unit tests mock the email provider. So the bugs users actually see, like a template variable that never rendered, a verification link with the wrong token, or a duplicate send, ship to production.
+03_how	The skill reads your repo, triggers each email flow, catches the real message through Mermail's MCP server, runs more than twenty checks, clicks the link to prove the flow really finishes, and fixes the code until everything is green.
+04_install	Here's Acme Notes, a small app that sends its signup and password reset emails through Mermail. We install the skill with one command, and point Claude Code at Mermail's hosted MCP server.
+05_prompt	Now, one prompt in Claude Code.
+06_discover	The skill loads, reads the code, and finds the Mermail mailbox over MCP. The app sends through that same mailbox, so it picks sender-side capture, which works on Mermail's free plan.
+07_red	The first run sends real email, and the skill's runner reads it back through Mermail's MCP tools. It catches a duplicate send, an unrendered first name token, and a verification link that returns HTTP 400 when clicked, so the account never gets verified. The password reset flow passes.
+08_fix	The agent maps each failure to a line of code, and fixes it: the template variable, the token in the link, and the duplicate hook. It even adds the missing plain text part.
+09_green	Re-run. All thirty four checks pass, including Mermail's delivery receipt, the clicked verification link, and the account now showing verified.
+09c_summary	It finishes with a summary of what broke, why, and the exact fix for each.
+09b_result	Three real bugs, found and fixed from one prompt, in about four minutes.
+10_diff	The fixes are small and reviewable: one template variable, the token in the verification link, and one duplicate call removed.
+11_ci	And the same suite runs without an agent: a zero dependency runner with JUnit output, ready for CI.
+11b_safe	And it's safe by design: read only toward Mermail, links followed only to hosts you allow, and email treated as data, never as instructions.
+12_outro	Install it with npx skills add, Anuragt1104 slash mermail email e two e. Built with Claude Code and Mermail.

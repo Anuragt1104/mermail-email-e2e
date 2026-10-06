@@ -1,0 +1,26 @@
+<!doctype html><html><head><meta charset="utf-8"><link rel="stylesheet" href="base.css">
+<style>
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:40px;margin-top:60px}
+.box{background:rgba(255,255,255,.04);border:2px solid rgba(67,201,203,.35);border-radius:22px;padding:34px 36px}
+.box h3{font-size:36px;font-weight:800;margin-bottom:18px}
+.box pre{font-family:"JetBrains Mono",monospace;font-size:24px;line-height:1.5;color:#d7eeee;white-space:pre-wrap}
+.box li{font-size:28px;line-height:1.5;color:#cfe9ea;margin:6px 0}
+.g{color:var(--green)}.c{color:var(--cyan)}.d{color:#7fa9ab}
+</style></head><body>
+<div class="card" style="justify-content:flex-start;padding-top:190px">
+  <div class="brand"><img src="mermail-mark.svg" alt="">mermail-email-e2e</div>
+  <div class="kicker">Reusable by any builder</div>
+  <h2>Same suite, no agent: a CI gate.</h2>
+  <div class="grid">
+    <div class="box"><h3>Zero-dependency runner</h3>
+<pre><span class="d">$</span> node run-email-e2e.mjs \
+    --spec .mermail/email-e2e.json
+<span class="g"> PASS </span> 34 passed · 0 failed
+<span class="d">→ report.md · report.json · junit.xml</span></pre></div>
+    <div class="box"><h3>Built to be safe</h3><ul>
+      <li>Read-only to Mermail: never sends or deletes</li>
+      <li>Follows links only to hosts <span class="c">you</span> allowlist</li>
+      <li>Email is data, never instructions</li>
+      <li>OTPs and tokens redacted · Free-plan RPM respected</li></ul></div>
+  </div>
+</div></body></html>

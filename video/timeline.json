@@ -1,0 +1,310 @@
+[
+ {
+  "kind": "card",
+  "png": "intro.png",
+  "dur": 9.4,
+  "vo": [
+   {
+    "clip": "01_intro",
+    "at": 0.5
+   }
+  ]
+ },
+ {
+  "kind": "card",
+  "png": "problem.png",
+  "dur": 12.8,
+  "vo": [
+   {
+    "clip": "02_problem",
+    "at": 0.4
+   }
+  ]
+ },
+ {
+  "kind": "card",
+  "png": "how.png",
+  "dur": 14.0,
+  "zoom": 0.02,
+  "vo": [
+   {
+    "clip": "03_how",
+    "at": 0.4
+   }
+  ]
+ },
+ {
+  "kind": "clip",
+  "src": "work/take-a.mp4",
+  "a": 0.4,
+  "b": 10.2,
+  "speed": 1.6,
+  "dur": 6.1,
+  "overlays": [
+   {
+    "png": "cap1.png",
+    "start": 0.3,
+    "end": 13.0
+   }
+  ],
+  "vo": [
+   {
+    "clip": "04_install",
+    "at": 0.3
+   }
+  ],
+  "badge": "badge-1.6x.png"
+ },
+ {
+  "kind": "clip",
+  "src": "work/take-a.mp4",
+  "a": 10.2,
+  "b": 22.6,
+  "speed": 4,
+  "dur": 3.1,
+  "badge": "badge-4x.png",
+  "overlays": [
+   {
+    "png": "cap1.png",
+    "start": 0.0,
+    "end": 3.1
+   }
+  ]
+ },
+ {
+  "kind": "clip",
+  "src": "work/take-a.mp4",
+  "a": 22.6,
+  "b": 27.0,
+  "speed": 1,
+  "dur": 4.2,
+  "crop": [
+   924,
+   520,
+   0,
+   540
+  ]
+ },
+ {
+  "kind": "clip",
+  "src": "work/take-b.mp4",
+  "a": 0.4,
+  "b": 15.6,
+  "speed": 2,
+  "dur": 7.6,
+  "overlays": [
+   {
+    "png": "cap2.png",
+    "start": 0.5,
+    "end": 7.6
+   }
+  ],
+  "badge": "badge-2x.png",
+  "vo": [
+   {
+    "clip": "05_prompt",
+    "at": 1.2
+   }
+  ]
+ },
+ {
+  "kind": "clip",
+  "src": "work/take-b.mp4",
+  "a": 15.6,
+  "b": 58.6,
+  "speed": 3,
+  "dur": 14.3,
+  "overlays": [
+   {
+    "png": "cap2.png",
+    "start": 0.0,
+    "end": 14.3
+   }
+  ],
+  "badge": "badge-3x.png",
+  "vo": [
+   {
+    "clip": "06_discover",
+    "at": 0.6
+   }
+  ]
+ },
+ {
+  "kind": "clip",
+  "src": "work/take-b.mp4",
+  "a": 58.6,
+  "b": 145.0,
+  "speed": 10,
+  "dur": 8.6,
+  "overlays": [
+   {
+    "png": "cap3.png",
+    "start": 0.2,
+    "end": 8.6
+   }
+  ],
+  "badge": "badge-10x.png",
+  "vo": [
+   {
+    "clip": "07_red",
+    "at": 0.3
+   }
+  ]
+ },
+ {
+  "kind": "freeze",
+  "src": "work/take-b.mp4",
+  "at": 146.5,
+  "dur": 10.4,
+  "overlays": [
+   {
+    "png": "redrun.png",
+    "start": 0.2,
+    "end": 10.2
+   }
+  ]
+ },
+ {
+  "kind": "clip",
+  "src": "work/take-b.mp4",
+  "a": 158.5,
+  "b": 174.4,
+  "speed": 1.5,
+  "dur": 10.6,
+  "overlays": [
+   {
+    "png": "cap4.png",
+    "start": 0.3,
+    "end": 10.6
+   }
+  ],
+  "badge": "badge-1.5x.png",
+  "vo": [
+   {
+    "clip": "08_fix",
+    "at": 0.3
+   }
+  ]
+ },
+ {
+  "kind": "clip",
+  "src": "work/take-b.mp4",
+  "a": 174.4,
+  "b": 262.8,
+  "speed": 12,
+  "dur": 7.4,
+  "overlays": [
+   {
+    "png": "cap5.png",
+    "start": 0.2,
+    "end": 7.4
+   }
+  ],
+  "badge": "badge-12x.png",
+  "vo": [
+   {
+    "clip": "09_green",
+    "at": 0.4
+   }
+  ]
+ },
+ {
+  "kind": "freeze",
+  "src": "work/take-b.mp4",
+  "at": 264.0,
+  "dur": 5.0,
+  "overlays": [
+   {
+    "png": "greenrun.png",
+    "start": 0.1,
+    "end": 4.9
+   }
+  ]
+ },
+ {
+  "kind": "clip",
+  "src": "work/take-b.mp4",
+  "a": 276.0,
+  "b": 283.4,
+  "speed": 1,
+  "dur": 7.4,
+  "vo": [
+   {
+    "clip": "09c_summary",
+    "at": 0.6
+   }
+  ]
+ },
+ {
+  "kind": "card",
+  "png": "result.png",
+  "dur": 6.4,
+  "zoom": 0.02,
+  "vo": [
+   {
+    "clip": "09b_result",
+    "at": 0.6
+   }
+  ]
+ },
+ {
+  "kind": "clip",
+  "src": "work/take-c.mp4",
+  "a": 0.4,
+  "b": 13.4,
+  "speed": 1.25,
+  "dur": 10.4,
+  "vo": [
+   {
+    "clip": "10_diff",
+    "at": 0.5
+   }
+  ],
+  "badge": "badge-1.25x.png"
+ },
+ {
+  "kind": "clip",
+  "src": "work/take-c.mp4",
+  "a": 14.5,
+  "b": 106.0,
+  "speed": 8,
+  "dur": 13.0,
+  "badge": "badge-8x.png",
+  "overlays": [
+   {
+    "png": "cap6.png",
+    "start": 0.3,
+    "end": 13.0
+   }
+  ],
+  "vo": [
+   {
+    "clip": "11_ci",
+    "at": 1.0
+   }
+  ]
+ },
+ {
+  "kind": "card",
+  "png": "ci.png",
+  "dur": 9.4,
+  "zoom": 0.02,
+  "vo": [
+   {
+    "clip": "11b_safe",
+    "at": 0.5
+   }
+  ]
+ },
+ {
+  "kind": "card",
+  "png": "outro.png",
+  "dur": 9.0,
+  "vo": [
+   {
+    "clip": "12_outro",
+    "at": 0.6
+   }
+  ]
+ }
+]

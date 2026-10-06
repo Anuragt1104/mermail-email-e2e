@@ -23,27 +23,27 @@ Unit tests mock the email provider, so the bugs that reach users are the ones no
 
 ## Demo
 
-https://github.com/Anuragt1104/mermail-email-e2e/raw/main/video/mermail-email-e2e-demo.mp4
+[![Red to green: first run 29 passed / 5 failed, re-run 34 passed / 0 failed](video/preview.gif)](video/mermail-email-e2e-demo.mp4)
 
-> [▶ Watch the demo video](video/mermail-email-e2e-demo.mp4): one prompt in Claude Code takes the Acme Notes demo app from three real email bugs to all green, using a live Mermail mailbox.
+**[▶ Watch the 2:49 demo video](video/mermail-email-e2e-demo.mp4).** It's a real Claude Code session against a live Mermail Free-plan mailbox. One prompt takes the Acme Notes demo app from **29 passed · 5 failed** to **34 passed · 0 failed** in 4 min 20 s, with three real email bugs fixed in code. Speed-ups are labelled on screen; [how the video was made](video/README.md).
+
+Output from that recorded run (the ✔ lines in between are trimmed):
 
 ```text
 ▶ Signup sends a working verification link [signup-verification] → anuragtiwari@mermail.app · capture sent
   ✔ DLV-001 App sent the email through Mermail
-  ✖ DLV-003 Exactly one email per trigger — 2 matching emails: duplicate send or ambiguous match (d41f525c-…, 9cbad39d-…)
+  ✖ DLV-003 Exactly one email per trigger — 2 matching emails: duplicate send or ambiguous match (ab59bc23-…, b7520257-…)
   ✔ DLV-004 Provider delivered the email
   ✖ CNT-001 No unrendered template tokens — {{firstName}} in "Acme Notes Hi {{firstName}}, Thanks for signing up"
-  ✖ CNT-002 Expected content present — missing: Ada
-  ✖ LNK-006 Call-to-action link works end to end — 400 localhost:4000/verify: HTTP 400 (expected 200), page missing "verified"; …
+  ✖ CNT-002 Expected content present — missing: Hi Ada Lovelace
+  ✖ LNK-006 Call-to-action link works end to end — 400 localhost:4000/verify: HTTP 400 (expected 200), page missing "verified"; page says "Link invalid This verification link is invalid or has expired."
   ✖ E2E-001 Account is verified after the click — body {"email":"anuragtiwari@mermail.app","name":"Ada Lovelace","verified":false} does not contain {"verified":true}
- FAIL  27 passed · 0 warnings · 5 failed · 2 flow(s)
+ FAIL  29 passed · 0 warnings · 5 failed · 2 flow(s)
 
         … the agent fixes server.mjs (duplicate hook, wrong token) and emails/verify.html ({{firstName}}), then re-runs …
 
- PASS  32 passed · 0 warnings · 0 failed · 2 flow(s)
+ PASS  34 passed · 0 warnings · 0 failed · 2 flow(s)
 ```
-
-Excerpts from real runs against a live Mermail mailbox (Free plan); the ✔ lines in between are trimmed.
 
 ## Install
 
@@ -118,6 +118,10 @@ sequenceDiagram
 | Compliance | `CMP-001` | marketing mail without `List-Unsubscribe` |
 
 Full catalog with fix hints: [references/checks.md](skills/mermail-email-e2e/references/checks.md).
+
+### Security scans
+
+`npx skills add` shows skills.sh's third-party scans. **Gen Agent Trust Hub: Safe.** **Snyk: Medium, W011 "third-party content exposure".** Any skill that reads email gets W011, and Mermail's official `mermail-agent-inbox` carries the same rating. This skill's answer is in [security.md](skills/mermail-email-e2e/references/security.md): email is treated as data and never as instructions, links are followed only from the user-authored allowlist, nothing is ever sent or deleted, and the deterministic checks run in code. **Socket: 1 low anomaly** about secrets in pull-request CI runs. The [CI template](skills/mermail-email-e2e/templates/github-action.yml) now keeps the key out of `npm ci`, scopes it to the steps that need it, puts it behind a protected `email-e2e` environment, and skips fork PRs.
 
 ## The spec
 

@@ -1,0 +1,22 @@
+<!doctype html><html><head><meta charset="utf-8"><link rel="stylesheet" href="base.css">
+<style>
+.term{position:absolute;left:90px;right:90px;top:140px;bottom:90px;background:#061417;border:2px solid rgba(67,201,203,.55);border-radius:22px;box-shadow:0 30px 80px rgba(0,0,0,.6);padding:34px 42px;overflow:hidden}
+.bar{display:flex;gap:10px;margin-bottom:20px}.bar i{width:16px;height:16px;border-radius:50%;display:block}
+pre{font-family:"JetBrains Mono",Menlo,monospace;font-size:24px;line-height:1.6;color:#e6f4f4;white-space:pre-wrap}
+.r{color:#ff6b6b;font-weight:700}.g{color:#43d17a}.d{color:#7fa9ab}.ok{background:#43d17a;color:#07191C;font-weight:800;padding:2px 6px;border-radius:4px}.bad{background:#ff6b6b;color:#07191C;font-weight:800;padding:2px 6px;border-radius:4px}
+.tag{position:absolute;top:66px;left:92px;font-size:28px;color:var(--cyan);font-weight:800;letter-spacing:3px;text-transform:uppercase;background:rgba(7,25,28,.9);padding:8px 16px;border-radius:10px}
+</style></head><body class="transparent"><div class="backdrop" style="position:absolute;inset:0;background:rgba(3,12,14,.62)"></div>
+<div class="tag">Re-run after the fixes · real runner output · trimmed</div>
+<div class="term"><div class="bar"><i style="background:#ff5f57"></i><i style="background:#febc2e"></i><i style="background:#28c840"></i></div><pre><b>▶ Signup sends a working verification link [signup-verification] → anuragtiwari@mermail.app · capture sent</b>
+  <span class="g">✔</span> <span class="d">DLV-001</span> App sent the email through Mermail
+  <span class="g">✔</span> <span class="d">DLV-003</span> Exactly one email per trigger
+  <span class="g">✔</span> <span class="d">DLV-004</span> Provider delivered the email
+  <span class="g">✔</span> <span class="d">CNT-001</span> No unrendered template tokens
+  <span class="g">✔</span> <span class="d">CNT-002</span> Expected content present
+  <span class="g">✔</span> <span class="d">LNK-003</span> Call-to-action link present
+  <span class="g">✔</span> <span class="d">LNK-006</span> Call-to-action link works end to end
+  <span class="g">✔</span> <span class="d">E2E-001</span> Account is verified after the click
+  <span class="d">… password-reset flow: all checks pass, emailed code accepted</span>
+
+<span class="ok"> PASS </span> 34 passed · 0 warnings · 0 failed · 2 flow(s)</pre></div>
+</body></html>

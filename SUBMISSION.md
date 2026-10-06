@@ -5,9 +5,9 @@
 | Skill | `mermail-email-e2e` |
 | Pull request (Mermail Skills repo) | _filled after the PR is opened_ |
 | Demo video (X) | _filled after posting_ |
-| Demo video (file) | [video/mermail-email-e2e-demo.mp4](video/mermail-email-e2e-demo.mp4) |
+| Demo video (file) | [video/mermail-email-e2e-demo.mp4](video/mermail-email-e2e-demo.mp4) (2:49, real Claude Code session against a live Mermail mailbox) |
 | Source repo | https://github.com/Anuragt1104/mermail-email-e2e |
-| AI client | Claude Code (CLI) with the hosted Mermail MCP server (`https://console.mermail.app/mcp`) |
+| AI client | Claude Code 2.1.289 (CLI, Opus 5.5) with the hosted Mermail MCP server (`https://console.mermail.app/mcp`) |
 
 ## Short description
 
@@ -16,3 +16,15 @@
 ## Why it matters
 
 Every app that sends email needs a test inbox, and every coding agent now needs one too. Unit tests mock the provider; this skill tests the real email in a real inbox, then closes the loop by fixing the code. It's Mailosaur/Mailtrap-style QA, done by your agent, on Mermail.
+
+## X post (attach video/mermail-email-e2e-demo.mp4)
+
+```text
+Built mermail-email-e2e, a @Mermailapp Agent Skill 🧪
+
+Your coding agent triggers your app's emails, reads the real mail via Mermail MCP, runs 20+ checks, clicks the link and fixes the code.
+
+One prompt in Claude Code: 3 bugs fixed in ~4 min.
+
+github.com/Anuragt1104/mermail-email-e2e
+```

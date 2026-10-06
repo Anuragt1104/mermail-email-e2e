@@ -2,7 +2,7 @@ Source tapes/theme.tape
 Output work/take-a.mp4
 Set Framerate 24
 Hide
-Type "source /private/tmp/claude-501/-Users-anurag1104-Desktop-bugs/e1344d12-c0e6-4bca-9dbc-b9e6ba8d6d3f/scratchpad/demo-env.zsh && clear" Enter
+Type "source tapes/demo-env.zsh && clear" Enter
 Sleep 1s
 Show
 Sleep 800ms

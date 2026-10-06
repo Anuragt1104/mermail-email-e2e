@@ -1,0 +1,23 @@
+<!doctype html><html><head><meta charset="utf-8"><link rel="stylesheet" href="base.css">
+<style>
+.term{position:absolute;left:90px;right:90px;top:140px;bottom:90px;background:#061417;border:2px solid rgba(67,201,203,.55);border-radius:22px;box-shadow:0 30px 80px rgba(0,0,0,.6);padding:34px 42px;overflow:hidden}
+.bar{display:flex;gap:10px;margin-bottom:20px}.bar i{width:16px;height:16px;border-radius:50%;display:block}
+pre{font-family:"JetBrains Mono",Menlo,monospace;font-size:24px;line-height:1.6;color:#e6f4f4;white-space:pre-wrap}
+.r{color:#ff6b6b;font-weight:700}.g{color:#43d17a}.d{color:#7fa9ab}.bad{background:#ff6b6b;color:#07191C;font-weight:800;padding:2px 6px;border-radius:4px}
+.tag{position:absolute;top:66px;left:92px;font-size:28px;color:var(--cyan);font-weight:800;letter-spacing:3px;text-transform:uppercase;background:rgba(7,25,28,.9);padding:8px 16px;border-radius:10px}
+</style></head><body class="transparent"><div class="backdrop" style="position:absolute;inset:0;background:rgba(3,12,14,.62)"></div>
+<div class="tag">First run · real runner output · passing lines trimmed</div>
+<div class="term"><div class="bar"><i style="background:#ff5f57"></i><i style="background:#febc2e"></i><i style="background:#28c840"></i></div><pre><b>▶ Signup sends a working verification link [signup-verification] → anuragtiwari@mermail.app · capture sent</b>
+  <span class="g">✔</span> <span class="d">DLV-001</span> App sent the email through Mermail
+  <span class="g">✔</span> <span class="d">DLV-002</span> Delivered within 30s
+  <span class="r">✖</span> <span class="d">DLV-003</span> <b>Exactly one email per trigger</b><span class="d"> — 2 matching emails: duplicate send or ambiguous match (ab59bc23-b4d2-445b-9903-38bbd0b486a8, b7520257-c499-4326-8869-196882fe9cd6)</span>
+  <span class="g">✔</span> <span class="d">DLV-004</span> Provider delivered the email
+  <span class="r">✖</span> <span class="d">CNT-001</span> <b>No unrendered template tokens</b><span class="d"> — {{firstName}} in &quot;Acme Notes Hi {{firstName}}, Thanks for signing up&quot;</span>
+  <span class="r">✖</span> <span class="d">CNT-002</span> <b>Expected content present</b><span class="d"> — missing: Hi Ada Lovelace</span>
+  <span class="g">✔</span> <span class="d">LNK-003</span> Call-to-action link present
+  <span class="r">✖</span> <span class="d">LNK-006</span> <b>Call-to-action link works end to end</b><span class="d"> — 400 localhost:4000/verify: HTTP 400 (expected 200), page missing &quot;verified&quot;; page says &quot;Link invalid This verification link is invalid or has expired.&quot;</span>
+  <span class="r">✖</span> <span class="d">E2E-001</span> <b>Account is verified after the click</b><span class="d"> — body {&quot;email&quot;:&quot;anuragtiwari@mermail.app&quot;,&quot;name&quot;:&quot;Ada Lovelace&quot;,&quot;verified&quot;:false} does not contain {&quot;verified&quot;:true}</span>
+  <span class="d">… password-reset flow: all checks pass</span>
+
+<span class="bad"> FAIL </span> 29 passed · 0 warnings · 5 failed · 2 flow(s)</pre></div>
+</body></html>

@@ -1,0 +1,27 @@
+<!doctype html><html><head><meta charset="utf-8"><link rel="stylesheet" href="base.css">
+<style>
+.flow{display:flex;align-items:stretch;gap:0;margin-top:70px}
+.step{flex:1;background:rgba(255,255,255,.04);border:2px solid rgba(67,201,203,.35);border-radius:22px;padding:30px 26px;min-height:300px;display:flex;flex-direction:column;gap:14px}
+.step .num{font-weight:800;color:var(--ink);background:var(--cyan);width:52px;height:52px;border-radius:50%;display:grid;place-items:center;font-size:28px}
+.step h3{font-size:34px;font-weight:800;line-height:1.15}
+.step p{font-size:24px;line-height:1.4;color:#a9cfd0}
+.step code{font-family:"JetBrains Mono",monospace;font-size:21px;color:#bff3f3;background:rgba(67,201,203,.12);padding:2px 8px;border-radius:7px}
+.arrow{width:46px;display:grid;place-items:center;color:var(--cyan);font-size:44px;font-weight:800}
+.step.hl{border-color:var(--cyan);background:rgba(67,201,203,.10)}
+</style></head><body>
+<div class="card" style="justify-content:flex-start;padding-top:190px">
+  <div class="brand"><img src="mermail-mark.svg" alt="">mermail-email-e2e</div>
+  <div class="kicker">How it works</div>
+  <h2>One prompt. Real email. Fixed code.</h2>
+  <div class="flow">
+    <div class="step"><div class="num">1</div><h3>Read the repo</h3><p>Finds the send calls and templates, then writes <code>.mermail/email-e2e.json</code></p></div>
+    <div class="arrow">→</div>
+    <div class="step"><div class="num">2</div><h3>Trigger the flow</h3><p>Signs up, requests a reset. Your app sends <b>real</b> email</p></div>
+    <div class="arrow">→</div>
+    <div class="step hl"><div class="num">3</div><h3>Catch it in Mermail</h3><p>MCP: <code>search_emails</code> <code>get_email</code> plus the delivery receipt</p></div>
+    <div class="arrow">→</div>
+    <div class="step"><div class="num">4</div><h3>20+ checks, click the link</h3><p>Tokens, links, OTP, duplicates. Does the flow actually finish?</p></div>
+    <div class="arrow">→</div>
+    <div class="step"><div class="num">5</div><h3>Fix and re-run</h3><p>Patches the code until green. Same suite runs in CI</p></div>
+  </div>
+</div></body></html>

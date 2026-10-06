@@ -3,7 +3,7 @@
 | Field | Value |
 | --- | --- |
 | Skill | `mermail-email-e2e` |
-| Pull request (Mermail Skills repo) | _filled after the PR is opened_ |
+| Pull request (Mermail Skills repo) | https://github.com/Nudgen-Marketing/mermail-skills/pull/481 |
 | Demo video (X) | _filled after posting_ |
 | Demo video (file) | [video/mermail-email-e2e-demo.mp4](video/mermail-email-e2e-demo.mp4) (2:49, real Claude Code session against a live Mermail mailbox) |
 | Source repo | https://github.com/Anuragt1104/mermail-email-e2e |

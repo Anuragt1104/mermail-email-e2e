@@ -69,7 +69,7 @@ Then ask:
 
 > Use $mermail-email-e2e to test my app's signup and password-reset emails end to end and fix whatever is broken.
 
-The skill is also submitted to the official [Nudgen-Marketing/mermail-skills](https://github.com/Nudgen-Marketing/mermail-skills) catalog.
+The skill is also submitted to the official [Nudgen-Marketing/mermail-skills](https://github.com/Nudgen-Marketing/mermail-skills) catalog in [Nudgen-Marketing/mermail-skills#481](https://github.com/Nudgen-Marketing/mermail-skills/pull/481).
 
 ## How it works
 
